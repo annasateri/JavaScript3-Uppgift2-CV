@@ -1,0 +1,99 @@
+<div class="grid-layout">
+
+  <div class="mb-7 text-center">
+    <div class="hover-zoom">
+      <img class="avatar" src="/assets/avatar.png" alt="image">
+    </div>
+
+    <h5>Anna Säteri</h5>
+    <hr>
+    <p>070-491 98 84</p>
+  </div>
+  
+  <div class="vl"></div>
+
+<form class="form" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+
+  <!-- Name input -->
+  <div class="row">
+    <div class="col-md-6 relative mb-3">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Förnamn"
+      formControlName="firstName"
+      [class.is-valid]="firstName.valid"
+      [class.is-invalid]="firstName.invalid && (firstName.dirty && firstName.touched)"
+      >
+        <small *ngIf="firstName.invalid && (firstName.dirty)"
+        class="error"><i class="fas fa-exclamation-circle"></i> Måste innehålla minst två tecken</small>
+    </div>
+  
+    <div class="col-md-6 relative mb-3">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Efternamn"
+      formControlName="lastName"
+      [class.is-valid]="lastName.valid"
+      [class.is-invalid]="lastName.invalid && (lastName.dirty && lastName.touched)"
+      >
+      <small *ngIf="lastName.invalid && (lastName.dirty)"
+        class="error"><i class="fas fa-exclamation-circle"></i> Måste innehålla minst två tecken</small>
+    </div>
+  </div>
+
+  <!-- Email input -->
+  <div class="row">
+    <div class="col relative mb-3">
+      <input
+      type="email"
+      class="form-control"
+      placeholder="Email adress"
+      formControlName="email"
+      [class.is-valid]="email.valid"
+      [class.is-invalid]="email.invalid && (email.dirty && email.touched)"
+      >
+      <small *ngIf="email.invalid && (email.dirty)"
+        class="error"><i class="fas fa-exclamation-circle"></i> Email är inte korrekt</small>
+    </div>
+  </div>
+
+  <!-- subject input -->
+  <div class="row">
+    <div class="col relative mb-2">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Ämne"
+      formControlName="subject"
+      [class.is-valid]="subject.valid"
+      [class.is-invalid]="subject.invalid && (subject.dirty && subject.touched)"
+      >
+      <small *ngIf="subject.invalid && (subject.dirty)"
+        class="error"><i class="fas fa-exclamation-circle"></i> Måste innehålla minst två tecken</small>
+    </div>
+  </div>
+
+  <!-- Message input -->
+  <div class="row">
+    <div class="col relative">
+      <textarea
+      type="text"
+      rows="6"
+      class="form-control"
+      placeholder="Meddelande"
+      formControlName="message"
+      [class.is-valid]="message.valid"
+      [class.is-invalid]="message.invalid && (message.dirty && message.touched)"
+      ></textarea>
+      <small *ngIf="message.invalid && (message.dirty)"
+        class="error"><i class="fas fa-exclamation-circle"></i> Meddelandet måste innehålla minst fem tecken</small>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button class="btn btn-block" [disabled]="!regForm.valid" [class.btn-light]="!regForm.valid">SKICKA</button>
+</form>
+
+</div>

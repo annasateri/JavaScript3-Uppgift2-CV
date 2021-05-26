@@ -1,0 +1,87 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 5rem;
+    justify-content: center;
+    grid-column-gap: 100px;
+    align-items: center;
+}
+.avatar {
+    width: 100%;
+}
+.mb-7 {
+    margin-bottom: 7rem;;
+}
+.vl {
+    border-left: 2px solid;
+    height: 350px;
+}
+.form {
+    background: rgba(0, 0, 0, 0.185);
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px 0px rgba(216, 216, 216, 0.432);
+    margin-bottom: 80px;
+}
+.form-control {
+    background: rgba(0, 0, 0, 0.075);
+    border: none;
+    padding: 0.8rem;
+    color:#fff !important;
+    margin-bottom: 30px;
+}
+::placeholder {
+    color: rgba(255, 255, 255, 0.548);
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: #fff !important;
+}
+textarea:focus::placeholder {
+    color: transparent;
+}
+textarea:focus {
+    box-shadow: none;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+input:focus {
+    box-shadow: none;
+}
+.error {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    color: #fff;
+}
+input[type=text] {
+    outline: none;
+    width: 300px;
+}
+input[type=email],
+textarea {
+    width: 623.5px;
+}
+.relative {
+    position: relative;
+}
+h5 {
+    color: #d8a04c;
+    font-weight: 700;
+}
+h5, p {
+    letter-spacing: 0.1rem;
+}
+.btn {
+    background-color: #985F6F;
+    transition: 0.6s;
+    transition-delay: 0.1s;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+.btn:hover {
+    color: #985F6F;
+    background-color: #fff;
+}
